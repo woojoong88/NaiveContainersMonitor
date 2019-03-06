@@ -16,4 +16,10 @@
 
 docker run -d -p 9100:9100 --name node-exporter prom/node-exporter:v0.14.0
 
-docker run   --volume=/:/rootfs:ro   --volume=/var/run:/var/run:rw   --volume=/sys:/sys:ro   --volume=/var/lib/docker/:/var/lib/docker:ro   --volume=/dev/disk/:/dev/disk:ro   --publish=8080:8080   --detach=true   --name=cadvisor   google/cadvisor:v0.27.0
+docker run --volume=/:/rootfs:ro --volume=/var/run:/var/run:rw --volume=/sys:/sys:ro --volume=/var/lib/docker/:/var/lib/docker:ro --volume=/dev/disk/:/dev/disk:ro --publish=8080:8080 --detach=true --name=cadvisor google/cadvisor:v0.27.0
+
+docker run -d --name prometheus -h prometheus -v $(pwd)/config/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus:v1.7.0 -config.file=/etc/prometheus/prometheus.yml
+
+docker run -d --name prometheus-cadvisor -h prometheus-cadvisor -v $(pwd)/config/prometheus-cadvisor.yml:/etc/prometheus/prometheus.yml prom/prometheus:v1.7.0 -config.file=/etc/prometheus/prometheus.yml
+
+docker run -d --name grafana -h grafana -e GF_SECURITY_ADMIN_PASSWORD=pass -p 3000:3000 --link prometheus:prometheus --link prometheus-cadvisor:prometheus-cadvisor grafana/grafana:4.4.3

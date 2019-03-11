@@ -42,4 +42,4 @@ Release 1: Download and run node-exporter, cAdvisor, and Grafana. (Mar 5, 2019)
 Release 2: Automatically set up Grafana and merge InfluxDB on top of Release 1. (Mar 15, 2019)
 
 ## Appendix 1. Troubleshooting
-**TBD***
+**TBD**

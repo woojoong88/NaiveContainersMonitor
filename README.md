@@ -26,6 +26,7 @@ node$ ./setenv.sh
 ```
 node$ groups
 ```
+If you can see the group `docker`, everything looks good!
 
 ## Install
 

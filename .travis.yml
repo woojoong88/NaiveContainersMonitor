@@ -1,0 +1,5 @@
+language: generic
+
+sudo: required
+
+script: bash ./set_env.sh && bash ./set_each_node.sh

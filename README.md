@@ -33,12 +33,17 @@ If you can see the group `docker`, everything looks good!
 
 ## Install
 
-### 1. Download and run Grafana, node-exporter, and cAdvisor
+### 1. Download and run node-exporter and cAdvisor
 ```
 node$ ./set_each_node.sh
 ```
 
-### 2. Configuration of Grafana within UI
+### 2. Download and run Grafana
+```
+node$ ./set_grafana.sh
+```
+
+### 3. Configuration of Grafana within UI
 **TBD**
 
 ## Release information

@@ -13,3 +13,33 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/woojoong88/NaiveContainersMonitor.svg)
 
 Naive version of Container Monitoring System with cAdvisor, InfluxDB, and Grafana. It is just for the study.
+
+## Preliminaries
+
+### 1. Need to install Docker engine
+```
+node$ ./setenv.sh
+```
+
+**NOTE: To make sure that the user is in the `docker` group, please log off and then log in again. You can check which groups belong to the user with the below command.**
+
+```
+node$ groups
+```
+
+## Install
+
+### 1. Download and run Grafana, node-exporter, and cAdvisor
+```
+node$ ./set_each_node.sh
+```
+
+### 2. Configuration of Grafana within UI
+**TBD**
+
+## Release information
+Release 1: Download and run node-exporter, cAdvisor, and Grafana. (Mar 5, 2019)
+Release 2: Automatically set up Grafana and merge InfluxDB on top of Release 1. (Mar 15, 2019)
+
+## Appendix 1. Troubleshooting
+**TBD***

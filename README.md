@@ -1,5 +1,7 @@
 # NaiveContainersMonitor
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7668c17939544539bd6e8df46f0f71af)](https://app.codacy.com/app/woojoong88/NaiveContainersMonitor?utm_source=github.com&utm_medium=referral&utm_content=woojoong88/NaiveContainersMonitor&utm_campaign=Badge_Grade_Dashboard)
+
 ![GitHub](https://img.shields.io/github/license/woojoong88/NaiveContainersMonitor.svg)
 ![GitHub top language](https://img.shields.io/github/languages/top/woojoong88/NaiveContainersMonitor.svg)
 ![GitHub language count](https://img.shields.io/github/languages/count/woojoong88/NaiveContainersMonitor.svg)

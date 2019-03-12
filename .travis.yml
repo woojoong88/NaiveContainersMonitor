@@ -2,4 +2,4 @@ language: generic
 
 sudo: required
 
-script: bash ./set_env.sh && bash ./set_each_node.sh
+script: bash ./set_env.sh && bash ./set_each_node.sh && bash ./set_grafana.sh

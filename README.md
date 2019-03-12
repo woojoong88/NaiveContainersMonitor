@@ -38,12 +38,21 @@ If you can see the group `docker`, everything looks good!
 node$ ./set_each_node.sh
 ```
 
-### 2. Download and run Grafana
+### 2. Configure prometheus configuration files
+* Go to `conf/prometheus.yml` and change `<IP_number>` to node IP addresses running node-exporter
+* Go to `conf/prometheus-cadvisor.yml` and change `<IP_number>` to node IP addresses running cAdvisor
+
+### 3. Download and run Prometheus for node-exporter and cAdvisor
+```
+node$ ./set_prom.sh
+```
+
+### 4. Download and run Grafana
 ```
 node$ ./set_grafana.sh
 ```
 
-### 3. Configuration of Grafana within UI
+### 5. Configuration of Grafana within UI
 **TBD**
 
 ## Release information

@@ -21,4 +21,4 @@ global:
 scrape_configs:
   - job_name: 'node-exporter'
     static_configs:
-      - targets: ['IP1:node-exporterport', 'IP2:node-exporterport']
+      - targets: ['IP1:9100', 'IP2:9100']

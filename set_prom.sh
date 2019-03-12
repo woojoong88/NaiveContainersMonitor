@@ -1,5 +1,5 @@
----
-
+#!/bin/bash
+#
 # Copyright 2019-present an Individual Developer Woojoong Kim
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,11 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-global:
-  scrape_interval: 5s
-  external_labels:
-    monitor: 'my-monitor'
-scrape_configs:
-  - job_name: 'node-exporter'
-    static_configs:
-      - targets: ['IP1:8080', 'IP2:8080']
+docker run -d -p 19090:9090 --name prometheus -h prometheus -v $(pwd)/config/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus:v1.7.0 -config.file=/etc/prometheus/prometheus.yml
+
+docker run -d -p 29090:9090 --name prometheus-cadvisor -h prometheus-cadvisor -v $(pwd)/config/prometheus-cadvisor.yml:/etc/prometheus/prometheus.yml prom/prometheus:v1.7.0 -config.file=/etc/prometheus/prometheus.yml
+
